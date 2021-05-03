@@ -21,7 +21,7 @@ class DatabaseSeeder extends Seeder
         Storage::makeDirectory('courses');
 
         //Llamar todos los seeder que quiero ejecutar (importante el orden para no alterar la creacion de otros campos)
-        //$this->call(PermissionSeeder::class);
+        $this->call(PermissionSeeder::class);
         $this->call(RoleSeeder::class);
         $this->call(UserSeeder::class);
         $this->call(LevelSeeder::class);
