@@ -1,9 +1,5 @@
 <div>
 
-    <x-slot name="course">
-        {{ $course->slug }}
-    </x-slot>
-
     <div class="bg-white overflow-hidden sm:rounded-lg">
         <div class="py-5">
             <h3 class="text-3xl leading-6 font-medium text-gray-500 uppercase">

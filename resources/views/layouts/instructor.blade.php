@@ -26,12 +26,12 @@
             @livewire('navigation-menu')
 
             <!-- Page Content -->
-            <div class="container py-8 grid grid-cols-5">
+            <div class="container py-8 grid grid-cols-5 gap-6">
 
                 <aside>
                     <h1 class="font-bold text-2xl mb-6 text-gray-500">Ajustes del curso</h1>
 
-                    <ul class="p-2 space-y-2 flex-1 overflow-auto text-gray-500">
+                    <ul class="mb-4 p-2 space-y-2 flex-1 overflow-auto text-gray-500">
                         <li>
                             <a href="{{ route('instructor.courses.edit', $course) }}" class="flex space-x-2 items-center p-2 rounded-md @routeIs('instructor.courses.edit', $course) bg-gray-300 text-blue-500 @else hover:bg-gray-300 hover:text-blue-500 @endif ">
                                 {{-- <i class="far fa-list-alt w-7"></i> --}}
@@ -65,7 +65,39 @@
                                 <span>Estudiantes</span>
                             </a>
                         </li>
+
                     </ul>
+
+                    @switch($course->status)
+                        @case(1)
+                        
+                            <form action="{{ route('instructor.courses.status', $course) }}" method="POST">
+                                @csrf
+        
+                                <button class="mr-2 px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-red-500 hover:bg-red-600 focus:outline-none focus:ring-1 focus:ring-offset-1 focus:ring-red-500" wire:click="store">Solicitar revisión</button>
+                            </form>
+
+                            @break
+                        @case(2)
+                            <div class="card">
+                                <div class="card-body">
+                                    Este curso se encuentra en revisión.
+                                </div>
+                            </div>
+                            
+                            @break
+                        @case(3)
+                            <div class="card">
+                                <div class="card-body">
+                                    Este curso se encuentra publicado.
+                                </div>
+                            </div>
+                            @break
+                        @default
+                            
+                    @endswitch
+
+                    
                     
                 </aside>
         
