@@ -32,6 +32,15 @@ class CoursePolicy
         } else {
             return false;
         }
-        
+    }
+
+    //Revisa si el curso esta publicado
+    public function dictated(User $user, Course $course){
+        if ($course->user_id == $user->id) {
+            return true;
+        }else{
+            return false;
+        }
+
     }
 }
