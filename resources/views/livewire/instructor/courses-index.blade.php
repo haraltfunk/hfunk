@@ -3,8 +3,8 @@
     <x-table-responsive>
 
         <div class="px-6 py-4 flex">
-            <input wire:keydown="limpiar_page" wire:model="search" class="form-input flex-1 shadow-sm" placeholder="Buscar por cursos">
-            <a class="btn btn-danger ml-2" href="{{ route('instructor.courses.create') }}">Crear nuevo curso</a>
+            <input wire:keydown="limpiar_page" wire:model="search" class="flex-1 mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-outline focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" placeholder="Buscar por cursos">
+            <a class="ml-2 px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-500 hover:bg-blue-600 focus:outline-none focus:ring-1 focus:ring-offset-1 focus:ring-blue-500" href="{{ route('instructor.courses.create') }}">Crear nuevo curso</a>
         </div>
 
         @if ($courses->count())
