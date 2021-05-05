@@ -7,6 +7,13 @@
 @stop
 
 @section('content')
+
+    @if (session('info'))
+        <div class="alert alert-success">
+            {{ session('info') }}
+        </div>
+    @endif
+
     <div class="card">
         <div class="card-body">
             <table class="table table-striped">
@@ -27,7 +34,7 @@
                         <td>{{ $course->title }}</td>
                         <td>{{ $course->category->name }}</td>
                         <td>
-                            <button class="btn btn-primary">Revisar</button>
+                            <a class="btn btn-primary" href="{{ route('admin.courses.show', $course)}}">Revisar</a>
                         </td>
                     </tr>
                         

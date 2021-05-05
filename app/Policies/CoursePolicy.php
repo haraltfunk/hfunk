@@ -43,4 +43,14 @@ class CoursePolicy
         }
 
     }
+
+    //Revisa si el curso esta en revision para publicarlo
+    public function revision(User $user, Course $course){
+        if ($course->status == 2) {
+            return true;
+        }else{
+            return false;
+        }
+
+    }
 }
