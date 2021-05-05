@@ -131,7 +131,7 @@
                     <form action="{{ route('admin.courses.approved', $course) }}" method="POST">
                         @csrf
 
-                        <button type="submit" class="px-4 py-2 w-full border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-500 hover:bg-blue-600 focus:outline-none focus:ring-1 focus:ring-offset-1 focus:ring-blue-500">Aprovar curso</button>
+                        <button type="submit" class="px-4 py-2 w-full border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-500 hover:bg-blue-600 focus:outline-none focus:ring-1 focus:ring-offset-1 focus:ring-blue-500">Aprobar curso</button>
                     </form>
                 </div>
             </section>
