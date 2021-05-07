@@ -12,7 +12,7 @@
     <x-table-responsive>
 
         <div class="px-6 py-4">
-            <input wire:model="search" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-outline focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" placeholder="Buscar por cursos">
+            <input wire:model="search" placeholder="Buscar por nombre" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-outline focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
         </div>
 
         @if ($students->count())

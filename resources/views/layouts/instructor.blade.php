@@ -66,6 +66,17 @@
                             </a>
                         </li>
 
+                        @if ($course->observation)
+                            <li>
+                                <a href="{{ route('instructor.courses.observation', $course) }}" class="flex space-x-2 items-center p-2 rounded-md @routeIs('instructor.courses.observation', $course) bg-gray-300 text-green-500 @else hover:bg-gray-300 hover:text-green-500 @endif">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                      </svg>
+                                    <span>Obsevaciones</span>
+                                </a>
+                            </li>
+                        @endif
+
                     </ul>
 
                     @switch($course->status)

@@ -256,6 +256,28 @@ return [
         ],
         ['header' => 'OPCIONES DE CURSOS'],
         [
+            'text'       => 'Configuración',
+            'url'       => '#',
+            'icon'      => 'fas fa-cogs',
+            'submenu' => [
+                [
+                    'text' => 'Categorias',
+                    'route'  => 'admin.courses.categories.index',
+                    'icon'      => 'fas fa-boxes',
+                ],
+                [
+                    'text' => 'Niveles',
+                    'url'  => '#',
+                    'icon'      => 'fas fa-award',
+                ],
+                [
+                    'text' => 'Precios',
+                    'url'  => '#',
+                    'icon'      => 'fab fa-btc',
+                ],
+            ]
+        ],
+        [
             'text' => 'Pendiente de aprovación',
             'route'  => 'admin.courses.index',
             'icon' => 'fas fa-fw fa-user',
